@@ -77,25 +77,25 @@ const Header = (props) => {
       ) : (
       <>
       <div className={classes.navMenu}>
-        <a href="/home">
-          <img src="/images/home-icon.svg" alt="HOME" />
+        <a href="/home" >
+          <img src="/images/home-icon.svg" alt="HOME" title="Home"/>
             <span>HOME</span>
         </a>
-        <a href="/search">
-          <img src="/images/search-icon.svg" alt="SEARCH" />
+        <a href="/search" >
+          <img src="/images/search-icon.svg" alt="SEARCH" title="Search" />
           <span>SEARCH</span>
         </a>
-        <a>
-          <img src="/images/watchlist-icon.svg" alt="WATCHLIST" />
-          <span>WATCHLIST</span>
-        </a>
-        <a href="/movies">
-          <img src="/images/movie-icon.svg" alt="MOVIES" />
+        <a href="/explore/movie" >
+          <img src="/images/movie-icon.svg" alt="MOVIES" title="Movies"/>
           <span>MOVIES</span>
         </a>
-        <a>
-          <img src="/images/series-icon.svg" alt="SERIES" />
+        <a href="/explore/tv"  >
+          <img src="/images/series-icon.svg" alt="SERIES" title="TV" />
           <span>TV </span>
+        </a>
+        <a>
+          <img src="/images/watchlist-icon.svg" alt="WATCHLIST"  title="Watchlist"/>
+          <span>WATCHLIST</span>
         </a>
       </div>
       <div className={classes.signOut} title="sign out" onClick={handleAuth} role="sign out button">

@@ -4,7 +4,7 @@ top:0;
 left:0;
 right:0;
 height:70px;
-background-color:#090b13;
+background-color:#07142b;
 display:flex;
 justify-content:space-between;
 align-items:center;
@@ -57,8 +57,11 @@ z-index: 3;
     a {
       display: flex;
       align-items: center;
-      padding: 0 12px;
+      padding: 0 8px;
       text-decoration: none;
+      @media only screen and (max-width: 640px) {
+        padding: 0 4px;
+      }
       
       img {
         height: 20px;
@@ -77,6 +80,9 @@ z-index: 3;
         padding: 2px 0px;
         white-space: nowrap;
         position: relative;
+        @media only screen and (max-width: 768px) {
+          display: none;
+        }
   
         &:after {
           content: "";

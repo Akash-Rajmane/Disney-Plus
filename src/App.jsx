@@ -1,4 +1,4 @@
-import React, {useEffect,useState} from "react";
+import React, {useEffect,Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
 import Header from "./layout/Header";
@@ -6,15 +6,18 @@ import "./App.css";
 import Home from "./pages/home/Home";
 import Search from "./pages/search/Search";
 import SearchResult from "./pages/searchResult/SearchResult";
-import Detail from "./layout/Detail";
+import Details from "./pages/details/Details";
 import { fetchDataFromApi } from "./utils/api";
 import { useSelector, useDispatch } from "react-redux";
 import { getApiConfiguration, getGenres } from "./features/api/apiSlice";
+import Explore from "./pages/explore/Explore";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
+import { ThreeDots } from "react-loader-spinner";
 
 function App() {
 const dispatch = useDispatch();
 const { url } = useSelector((state) => state.api);
-console.log(url);
+
 
 useEffect(() => {
     fetchApiConfig();
@@ -23,7 +26,6 @@ useEffect(() => {
 
 const fetchApiConfig = () => {
     fetchDataFromApi("/configuration").then((res) => {
-        console.log(res);
 
         const url = {
             backdrop: res.images.secure_base_url + "original",
@@ -45,7 +47,7 @@ const genresCall = async () => {
     });
 
     const data = await Promise.all(promises);
-    console.log(data);
+  
     data.map(({ genres }) => {
         return genres.map((item) => (allGenres[item.id] = item));
     });
@@ -57,13 +59,30 @@ const genresCall = async () => {
     <div className="App">
       <Router>
         <Header />
+        <Suspense fallback={  
+                  <div className="wrapper">
+                    <div className="center">
+                      <ThreeDots  
+                          height="80" 
+                          width="80" 
+                          radius="9"
+                          color="#1e90ff" 
+                          ariaLabel="three-dots-loading"
+                          visible={true}
+                      />
+                    </div>
+                  </div>    
+        }>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/home" element={<Home/>} />
           <Route path="/search" element={<Search/>} />
           <Route path="/search/:query" element={<SearchResult />} />
-          <Route path="/detail/:id" element={<Detail/>} />
+          <Route path="/:mediaType/:id" element={<Details />} />
+          <Route path="/explore/:mediaType" element={<Explore />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
+        </Suspense>
       </Router>
     </div>
   );
