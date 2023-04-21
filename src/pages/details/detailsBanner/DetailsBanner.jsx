@@ -117,7 +117,7 @@ const DetailsBanner = () => {
                     )}
                 </>
             ) : (
-                  <div className="wrapper">
+                  <div className="loaderWrapper">
                     <div className="center">
                       <ThreeDots  
                           height="80" 

@@ -160,3 +160,11 @@
         background-color: rgba(89, 89, 90, 0.4);
     }
 }
+
+.loaderWrapper{
+    min-height: 80vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
