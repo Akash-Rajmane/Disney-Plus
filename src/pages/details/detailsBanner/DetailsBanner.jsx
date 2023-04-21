@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import dayjs from "dayjs";
@@ -106,7 +106,7 @@ const DetailsBanner = () => {
                                         </div> 
                                         <div className="btnGroup">
                                           <button className="watchNow">▶  Watch Now </button>   
-                                          <button className="watchlist">+</button>  
+                                          <button className="watchlist" title="Add to watchlist">+</button>  
                                         </div>                                 
                                     </div>
                                     

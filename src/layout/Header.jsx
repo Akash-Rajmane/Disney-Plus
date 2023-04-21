@@ -9,7 +9,8 @@ import {
   setUserLoginDetails,
   setSignOutState,
 } from "../features/user/userSlice";
-import { useNavigate,useLocation } from "react-router-dom";
+import { useNavigate,useLocation,Link } from "react-router-dom";
+
 
 const Header = (props) => {
   let location = useLocation();
@@ -23,13 +24,15 @@ const Header = (props) => {
     onAuthStateChanged(auth,async (user) => {
       if (user) {
         setUser(user);
-       
+        
         if(location.pathname==="/"){
           navigate("/home");
         }
         
       }
     });
+
+  
   }, [userName]);
  
   const handleAuth = () => {
@@ -46,7 +49,7 @@ const Header = (props) => {
           .then(() => {
             dispatch(setSignOutState());
             navigate("/");
-            console.log("user signed out");
+            
           })
           .catch((err) => alert(err.message));
     }
@@ -77,26 +80,26 @@ const Header = (props) => {
       ) : (
       <>
       <div className={classes.navMenu}>
-        <a href="/home" >
+        <Link to="/home" >
           <img src="/images/home-icon.svg" alt="HOME" title="Home"/>
             <span>HOME</span>
-        </a>
-        <a href="/search" >
+        </Link>
+        <Link to="/search" >
           <img src="/images/search-icon.svg" alt="SEARCH" title="Search" />
           <span>SEARCH</span>
-        </a>
-        <a href="/explore/movie" >
+        </Link>
+        <Link to="/explore/movie" >
           <img src="/images/movie-icon.svg" alt="MOVIES" title="Movies"/>
           <span>MOVIES</span>
-        </a>
-        <a href="/explore/tv"  >
+        </Link>
+        <Link to="/explore/tv"  >
           <img src="/images/series-icon.svg" alt="SERIES" title="TV" />
           <span>TV </span>
-        </a>
-        <a>
+        </Link>
+        <Link>
           <img src="/images/watchlist-icon.svg" alt="WATCHLIST"  title="Watchlist"/>
           <span>WATCHLIST</span>
-        </a>
+        </Link>
       </div>
       <div className={classes.signOut} title="sign out" onClick={handleAuth} role="sign out button">
         <img className={classes.userImg} src={userPhoto} alt={userName} />

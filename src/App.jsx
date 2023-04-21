@@ -14,10 +14,10 @@ import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import { ThreeDots } from "react-loader-spinner";
 
+
+
 function App() {
 const dispatch = useDispatch();
-const { url } = useSelector((state) => state.api);
-
 
 useEffect(() => {
     fetchApiConfig();
