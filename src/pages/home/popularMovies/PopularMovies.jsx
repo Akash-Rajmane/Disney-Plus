@@ -11,7 +11,7 @@ const PopularMovies= () => {
         <div className={classes.wrapper}>
             <span className={classes.carouselTitle}>Popular Movies</span>
         </div>
-        <Carousel data={data?.results} loading={loading} />
+        <Carousel data={data?.results} loading={loading} endpoint={"movie"}/>
     </div>
     );
 };
