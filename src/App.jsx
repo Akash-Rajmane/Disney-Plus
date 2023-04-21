@@ -1,7 +1,7 @@
 import React, {useEffect,Suspense} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./pages/login/Login";
-import Header from "./layout/Header";
+import Header from "./layout/header/Header";
 import "./App.css";
 import Home from "./pages/home/Home";
 import Search from "./pages/search/Search";
@@ -13,6 +13,7 @@ import { getApiConfiguration, getGenres } from "./features/api/apiSlice";
 import Explore from "./pages/explore/Explore";
 import PageNotFound from "./pages/pageNotFound/PageNotFound";
 import { ThreeDots } from "react-loader-spinner";
+import Footer from "./layout/footer/Footer";
 
 
 
@@ -83,6 +84,7 @@ const genresCall = async () => {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
         </Suspense>
+        <Footer/>
       </Router>
     </div>
   );

@@ -1,14 +1,14 @@
 import React, {useEffect} from 'react';
 import classes from "./Header.module.scss";
 import {  signInWithPopup,signOut,onAuthStateChanged } from "firebase/auth";
-import { auth, provider } from "../firebase";
+import { auth, provider } from "../../firebase";
 import {useDispatch, useSelector} from "react-redux";
 import {
   selectUserName,
   selectUserPhoto,
   setUserLoginDetails,
   setSignOutState,
-} from "../features/user/userSlice";
+} from "../../features/user/userSlice";
 import { useNavigate,useLocation,Link } from "react-router-dom";
 
 
