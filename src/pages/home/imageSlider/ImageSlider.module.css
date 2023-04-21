@@ -1,0 +1,52 @@
+.carousel {
+  margin-top: 20px;
+}
+.carousel > button {
+  opacity: 0;
+  height: 100%;
+  width: 5vw;
+  z-index: 1;
+}
+.carousel > button:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease 0s;
+}
+.carousel ul li button:before {
+  font-size: 10px;
+  color: rgb(150, 158, 171);
+}
+.carousel li.slick-active button:before {
+  color: white;
+}
+.carousel .slick-list {
+  overflow: initial;
+}
+.carousel .slick-prev {
+  left: -75px;
+}
+.carousel .slick-next {
+  right: -75px;
+}
+
+.wrapper {
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+.wrapper a {
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.69) 0px 26px 30px -10px, rgba(0, 0, 0, 0.73) 0px 16px 10px -10px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 4px;
+}
+.wrapper a img {
+  width: 100%;
+  height: 100%;
+}
+.wrapper a:hover {
+  padding: 0;
+  border: 4px solid rgba(249, 249, 249, 0.8);
+  transition-duration: 300ms;
+}/*# sourceMappingURL=ImageSlider.module.css.map */

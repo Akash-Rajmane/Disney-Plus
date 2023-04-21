@@ -1,0 +1,97 @@
+.card {
+  width: calc(50% - 5px);
+  margin-bottom: 25px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+@media only screen and (min-width: 768px) {
+  .card {
+    width: calc(25% - 15px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .card {
+    width: calc(20% - 16px);
+  }
+}
+.card .posterBlock {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1.5;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 10px;
+  transition: all ease 0.5s;
+}
+.card .posterBlock .lazy-load-image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.card .posterBlock .lazy-load-image-background img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.card .posterBlock .circleRating {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  top: 30px;
+  background-color: white;
+  flex-shrink: 0;
+}
+@media only screen and (min-width: 768px) {
+  .card .posterBlock .circleRating {
+    width: 50px;
+    height: 50px;
+  }
+}
+.card .posterBlock .genres {
+  display: none;
+  position: relative;
+}
+@media only screen and (min-width: 768px) {
+  .card .posterBlock .genres {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-end;
+  }
+}
+.card:hover .posterBlock {
+  opacity: 0.5;
+}
+
+.textBlock {
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+.textBlock .title {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media only screen and (min-width: 768px) {
+  .textBlock .title {
+    font-size: 20px;
+  }
+}
+.textBlock .date {
+  font-size: 14px;
+  opacity: 0.5;
+}/*# sourceMappingURL=Card.css.map */

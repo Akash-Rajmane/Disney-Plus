@@ -1,0 +1,121 @@
+.navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 70px;
+  background-color: #07142b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  letter-spacing: 16px;
+  z-index: 3;
+}
+
+.logo {
+  padding: 0;
+  width: 80px;
+  margin-top: 4px;
+  max-height: 70px;
+  font-size: 0;
+  display: inline-block;
+}
+.logo img {
+  display: block;
+  width: 100%;
+}
+
+.logIn {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 8px 16px;
+  text-transform: uppercase;
+  color: rgb(249, 249, 249);
+  letter-spacing: 1.5px;
+  border: 1px solid #f9f9f9;
+  border-radius: 4px;
+  transition: all 0.2s ease 0s;
+}
+.logIn:hover {
+  background-color: #f9f9f9;
+  color: #000;
+  border-color: transparent;
+}
+
+.navMenu {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+  height: 100%;
+  justify-content: flex-end;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  margin-right: auto;
+  margin-left: 25px;
+}
+.navMenu a {
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  text-decoration: none;
+}
+@media only screen and (max-width: 640px) {
+  .navMenu a {
+    padding: 0 4px;
+  }
+}
+.navMenu a img {
+  height: 20px;
+  min-width: 20px;
+  width: 20px;
+  z-index: auto;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+.navMenu a span {
+  color: rgb(249, 249, 249);
+  font-size: 13px;
+  letter-spacing: 1.42px;
+  line-height: 1.08;
+  padding: 2px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+@media only screen and (max-width: 768px) {
+  .navMenu a span {
+    display: none;
+  }
+}
+.navMenu a span:after {
+  content: "";
+  position: absolute;
+  background-color: #ffffff;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -6px;
+  transition: 0.3s;
+}
+.navMenu a span:hover {
+  color: #ffffff;
+}
+.navMenu a span:hover:after {
+  width: 100%;
+}
+
+.signOut {
+  position: relative;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.userImg {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+}/*# sourceMappingURL=Header.module.css.map */

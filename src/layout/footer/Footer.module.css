@@ -1,0 +1,35 @@
+.footerBox {
+  position: relative;
+  min-height: 180px;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  background-color: #07142b;
+}
+.footerBox .footer {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  bottom: 0;
+  text-align: center;
+  padding-top: 5px;
+  left: 0;
+}
+.footerBox .footer .para {
+  color: rgba(249, 249, 249, 0.6);
+}
+.footerBox .footer .check {
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.footerBox .footer .icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  font-size: 24px;
+}
+.footerBox .footerBase {
+  display: flex;
+  justify-content: center;
+}/*# sourceMappingURL=Footer.module.css.map */

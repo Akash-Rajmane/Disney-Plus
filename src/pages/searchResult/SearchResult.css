@@ -1,0 +1,35 @@
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.searchResultsPage {
+  min-height: 700px;
+  padding-top: 100px;
+}
+.searchResultsPage .resultNotFound {
+  font-size: 24px;
+  color: var(--black-light);
+}
+.searchResultsPage .pageTitle {
+  font-size: 24px;
+  line-height: 34px;
+  color: white;
+  margin-bottom: 25px;
+}
+.searchResultsPage .content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+@media only screen and (min-width: 768px) {
+  .searchResultsPage .content {
+    gap: 20px;
+  }
+}
+.searchResultsPage .content .card .posterBlock {
+  margin-bottom: 20px;
+}/*# sourceMappingURL=SearchResult.css.map */
