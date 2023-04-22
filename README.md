@@ -1,3 +1,11 @@
+## Technical Stack Used: ReactJS, HTML, SCSS, JavaScript, Redux Toolkit, React-Router-Dom, TMDB API, Firebase Authentication.
+
+## Features:
+### Disney+ clone with cool, responsive user interface, firebase authentication.
+### Search movies and tv shows.
+### Movies or tv shows recommendations.
+### Get details of movie or tv show and watch trailers, videos.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
