@@ -6,6 +6,10 @@
 ### Movies or tv shows recommendations.
 ### Get details of movie or tv show and watch trailers, videos.
 
+## Hosted Link: https://disney-plus-reactjs.netlify.app
+
+### If you liked this project, don't forget to give it a star.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
